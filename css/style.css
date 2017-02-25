@@ -669,10 +669,9 @@ footer ul li a:hover {
     margin-bottom: 0;
 }
 
-
-form input[type=email] {
+/*form input[type=email] {
     width:75%;
-}
+}*/
 
 .social a {
     display: block;
