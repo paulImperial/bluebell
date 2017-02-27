@@ -4,7 +4,7 @@
   "description": "Bluebell therapy website",
   "main": "index.js",
   "scripts": {
-    "start": ""
+    "start": "gulp"
   },
   "author": "Paul Mason",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "eslint": "^3.15.0",
     "express": "^4.14.1",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.3",
     "gulp-mustache-plus": "^1.0.1"
   },
   "dependencies": {
