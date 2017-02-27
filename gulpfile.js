@@ -4,9 +4,7 @@ var cleanCSS = require("gulp-clean-css");
 
 gulp.task('default', function(){
     gulp.src("./templates/*.mustache")
-        .pipe (mustache({
-            msg: "hello Gulp!"
-        },{},{
+        .pipe (mustache({},{},{
             head: "./templates/partials/head.mustache",
             header: "./templates/partials/header.mustache",
             footer: "./templates/partials/footer.mustache",
