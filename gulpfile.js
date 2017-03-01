@@ -2,6 +2,7 @@ var gulp = require("gulp");
 var mustache = require("gulp-mustache-plus");
 var cleanCSS = require("gulp-clean-css");
 var browserSync = require('browser-sync');
+var imagemin = require('gulp-imagemin');
 
 gulp.task('mustache', function(){
     gulp.src("./templates/*.mustache")
@@ -40,4 +41,10 @@ gulp.task('copyJS', function () {
              .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('default', ['copyJS','copyImages','mustache', 'minify', 'sync']);
+gulp.task('imageMin', function(){
+    gulp.src('img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/img'))
+});
+
+gulp.task('default', ['copyJS','imageMin','mustache', 'minify', 'sync']);
