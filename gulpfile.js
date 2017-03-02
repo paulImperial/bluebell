@@ -5,12 +5,6 @@ var browserSync = require('browser-sync');
 var imagemin = require('gulp-imagemin');
 var del = require('delete');
 
-gulp.task('delete', function (){
-    del(['dist/'], function(err){
-        if (err) throw err;
-    })
-});
-
 gulp.task('mustache', function(){
     gulp.src("./templates/*.mustache")
         .pipe (mustache({},{},{
