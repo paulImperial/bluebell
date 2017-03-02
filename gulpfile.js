@@ -3,7 +3,6 @@ var mustache = require("gulp-mustache-plus");
 var cleanCSS = require("gulp-clean-css");
 var browserSync = require('browser-sync');
 var imagemin = require('gulp-imagemin');
-var del = require('delete');
 
 gulp.task('mustache', function(){
     gulp.src("./templates/*.mustache")
