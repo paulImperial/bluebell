@@ -114,6 +114,10 @@ header ul li {
     position: relative;
 }
 
+header ul li:last-of-type {
+    width:90px;
+}
+
 header .mobile-wrapper ul {
     width:auto;
 } 
@@ -138,7 +142,7 @@ header ul li a:hover {
 }
 
 .image-container img {
-    width:30%;
+    width:20%;
     border-radius: 50%;
 }
 
