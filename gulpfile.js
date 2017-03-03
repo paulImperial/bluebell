@@ -12,9 +12,9 @@ gulp.task('clean', function() {
 gulp.task('mustache', function(){
     gulp.src("./templates/*.mustache")
         .pipe (mustache({
-            msg:{
-                text:'bob',
-                date:'now'
+            index:{
+                title:'Nottingham Counselling and Hypnotherapy Service | Bluebell Therapy',
+                description:'<meta name="description" content="Counselling, Hypnotherapy in Nottingham. Bluebell Therapy is a Nottingham based caring and confidential Counselling and Hypnotherapy service. Offering courses on anxiety and weight loss on a regular basis. Easily within reach of Derby." />'
             }
         },{},{
             head: "./templates/partials/head.mustache",
