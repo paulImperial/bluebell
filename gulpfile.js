@@ -1,7 +1,7 @@
 var gulp = require("gulp");
 var mustache = require("gulp-mustache-plus");
 var cleanCSS = require("gulp-clean-css");
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var del = require('del');
 
@@ -33,9 +33,7 @@ gulp.task('minify', function(){
 
 gulp.task('sync', function(){
       browserSync.init({
-        server: {
-            baseDir: 'dist'
-    },
+        server: './dist'
   })
 });
 
@@ -57,4 +55,4 @@ gulp.task('imageMin', function(){
         .pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('default', ['copyJS','imageMin','mustache', 'minify', 'sync']);
+gulp.task('default', gulp.series ('copyJS','imageMin','mustache', 'minify', 'sync'));
