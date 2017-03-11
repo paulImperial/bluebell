@@ -55,4 +55,4 @@ gulp.task('imageMin', function(){
         .pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('default', gulp.series ('copyJS','imageMin','mustache', 'minify', 'sync'));
+gulp.task('default', ['copyJS','imageMin','mustache', 'minify']);
