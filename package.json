@@ -7,7 +7,7 @@
     "prebuild": "del-cli dist -f",
     "build": "gulp",
     "server": "http-server ./dist",
-    "sync" : "browser-sync start --server ./dist",
+    "sync": "browser-sync start --server ./dist",
     "start": "npm run build && npm run sync"
   },
   "author": "Paul Mason",
@@ -20,6 +20,7 @@
     "express": "^4.14.1",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.3",
+    "gulp-foreach": "^0.1.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-mustache-plus": "^1.0.1",
     "gulp-watch": "^4.3.11",

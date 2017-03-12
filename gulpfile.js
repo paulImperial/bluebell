@@ -4,6 +4,14 @@ var cleanCSS = require("gulp-clean-css");
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var del = require('del');
+var htmlmin = require('gulp-html-minifier');
+ 
+gulp.task('minify', function() {
+  gulp.src('./src/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('./dist'))
+});
+
 
 gulp.task('clean', function() {
     del('dist/css');
@@ -11,18 +19,14 @@ gulp.task('clean', function() {
 
 gulp.task('mustache', function(){
     gulp.src("./templates/*.mustache")
-        .pipe (mustache({
-            index:{
-                title:'Nottingham Counselling and Hypnotherapy Service | Bluebell Therapy',
-                description:'<meta name="description" content="Counselling, Hypnotherapy in Nottingham. Bluebell Therapy is a Nottingham based caring and confidential Counselling and Hypnotherapy service. Offering courses on anxiety and weight loss on a regular basis. Easily within reach of Derby." />'
-            }
-        },{},{
+        .pipe (mustache({},{},{
             head: "./templates/partials/head.mustache",
             header: "./templates/partials/header.mustache",
             footer: "./templates/partials/footer.mustache",
             scripts: "./templates/partials/scripts.mustache",
             nav: "./templates/partials/nav.mustache"
-        })).pipe(gulp.dest("./dist"));
+        })).pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest("./dist"));
 });
 
 gulp.task('minify', function(){
