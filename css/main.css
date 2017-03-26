@@ -191,7 +191,7 @@ header ul li a:hover {
     height:10px;
     display: inline-block;
     margin-left:4px;
-    transform: rotate(180deg);
+    /*transform: rotate(180deg);*/
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
@@ -214,11 +214,13 @@ header ul li a:hover {
     position: absolute;
     background-color: #fff;
     top:25px;
-    padding-top:30px;
-    border-radius: 0 0 50% 50% / 15%;
+    padding-top:10px;
+    border-radius: 3px 3px;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
+    box-shadow: 0 0 1px #000;
+
 }
 
 .hidden-sub a {
@@ -226,6 +228,7 @@ header ul li a:hover {
     margin:5px;
     padding:3px 8px;
 }
+
 
 .hidden-sub a:after {
     background: url('');
