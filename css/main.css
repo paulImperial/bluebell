@@ -695,4 +695,27 @@ footer ul li a:hover {
     width:35%;
 }
 
+.image-divide-right {
+    border-right: 1px solid #ccc;
+    padding-right:18px;
+}
+
+.image-divide-left {
+    padding-left:13px;
+}
+
+@media (max-width:650px){
+    .image-divide-right {
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding-bottom:40px;
+        padding-right: 0;
+    }
+
+    .image-divide-left {
+        padding-top:40px;
+        padding-left:0;
+    }
+
+}
 
