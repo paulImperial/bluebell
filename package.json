@@ -8,7 +8,8 @@
     "build": "gulp",
     "server": "http-server ./dist",
     "sync": "browser-sync start --server ./dist",
-    "start": "npm run build && npm run sync"
+    "start": "npm run build && npm run dev",
+    "dev": "lite-server"
   },
   "author": "Paul Mason",
   "license": "ISC",
