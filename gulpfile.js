@@ -24,7 +24,8 @@ gulp.task('mustache', function(){
             header: "./templates/partials/header.mustache",
             footer: "./templates/partials/footer.mustache",
             scripts: "./templates/partials/scripts.mustache",
-            nav: "./templates/partials/nav.mustache"
+            nav: "./templates/partials/nav.mustache",
+            memberof: "./templates/partials/memberof.mustache"
         })).pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest("./dist"));
 });
