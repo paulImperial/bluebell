@@ -5,6 +5,14 @@ var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var del = require('del');
 var htmlmin = require('gulp-html-minifier');
+var sass = require('gulp-sass');
+
+gulp.task('sass', function(){
+    gulp.src('./src/sass/main.scss')
+   		.pipe(sass({ style: 'expanded' }))
+        .pipe(cleanCSS())
+		.pipe(gulp.dest('./dist/css'));
+});
  
 gulp.task('minify', function() {
   gulp.src('./src/*.html')
@@ -60,4 +68,4 @@ gulp.task('imageMin', function(){
         .pipe(gulp.dest('dist/img'))
 });
 
-gulp.task('default', ['copyJS','imageMin','mustache', 'minify']);
+gulp.task('default', ['copyJS','imageMin','mustache', 'sass', 'minify']);
