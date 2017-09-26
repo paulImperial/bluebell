@@ -28,7 +28,8 @@
     "gulp-uncss": "^1.0.6",
     "gulp-watch": "^4.3.11",
     "http-server": "^0.9.0",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "webdav": "^1.1.0"
   },
   "dependencies": {
     "del": "^2.2.2",
