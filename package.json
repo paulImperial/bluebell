@@ -8,7 +8,7 @@
     "build": "gulp",
     "server": "http-server ./dist",
     "sync": "browser-sync start --server ./dist",
-    "dev": "npm run build && npm run dev",
+    "dev": "npm run build && npm run sync",
     "start": "lite-server"
   },
   "author": "Paul Mason",
@@ -22,6 +22,7 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.3",
     "gulp-foreach": "^0.1.0",
+    "gulp-html-minifier": "^0.1.8",
     "gulp-imagemin": "^3.1.1",
     "gulp-mustache-plus": "^1.0.1",
     "gulp-sass": "^3.1.0",
