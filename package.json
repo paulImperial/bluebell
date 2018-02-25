@@ -39,6 +39,8 @@
   "dependencies": {
     "del": "^2.2.2",
     "mustache": "^2.3.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "watch": "^1.0.2"
   }
 }
