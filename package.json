@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "del-cli dist -f",
-    "postbuild": "eslint src/js/script.js",
+    "postbuild": "eslint --fix src/js/script.js",
     "build": "gulp",
     "server": "http-server ./dist",
     "sync": "browser-sync start --server ./dist",
