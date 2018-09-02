@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Bluebell therapy website",
   "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm lint:js"
+    }
+  },
   "scripts": {
     "prebuild": "del-cli dist -f",
     "postbuild": "eslint --fix src/js/script.js",
@@ -11,7 +16,8 @@
     "sync": "browser-sync start --server ./dist",
     "dev": "npm run build && npm run sync",
     "start": "lite-server",
-    "precommit": "pretty-quick --staged"
+    "precommit": "pretty-quick --staged",
+    "lint:js": "eslint src/js/script.js"
   },
   "author": "Paul Mason",
   "license": "ISC",
@@ -20,7 +26,7 @@
     "browser-sync": "^2.18.8",
     "del": "^2.2.2",
     "del-cli": "^0.2.1",
-    "eslint": "^3.15.0",
+    "eslint": "^3.19.0",
     "eslint-config-google": "^0.9.1",
     "express": "^4.14.1",
     "gulp": "^3.9.1",
