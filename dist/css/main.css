@@ -13,6 +13,9 @@ html {
   margin: 15px 0;
   width: 100%;
 }
+main {
+  margin-top: 86px;
+}
 .inner-column {
   width: 80%;
   margin: 0 auto;
@@ -131,10 +134,11 @@ html {
 }
 header {
   width: 100%;
-  box-shadow: 0 4px 10px -6px #0fb5c1;
+  box-shadow: #000 0 5px 20px -10px;
   padding-bottom: 5px;
   background-color: #fff;
   height: 86.11px;
+  position: fixed;
 }
 header ul:not(.hidden-sub) {
   margin-left: auto;
@@ -666,10 +670,11 @@ footer ul li a:hover {
 }
 header {
   width: 100%;
-  box-shadow: 0 4px 10px -6px #0fb5c1;
+  box-shadow: #000 0 5px 20px -10px;
   padding-bottom: 5px;
   background-color: #fff;
   height: 86.11px;
+  position: fixed;
 }
 header ul:not(.hidden-sub) {
   margin-left: auto;
@@ -830,14 +835,18 @@ nav {
   visibility: hidden;
   height: 0;
   transition: all 0.5s ease-in-out;
+  margin-top: 86px;
+  position: absolute;
 }
 nav ul {
   background-color: #fff;
+  box-shadow: #000 0 10px 20px -10px;
 }
 .displayBlock {
   opacity: 1;
   visibility: visible;
   height: 100%;
+  width: 100%;
 }
 .list-clear-mobile li a {
   margin-left: 10px;
