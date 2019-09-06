@@ -1,0 +1,23 @@
+.cookie-banner {
+  display: none;
+  width: 80%;
+  position: fixed;
+  bottom: 40px;
+  left: 30px;
+  background-color: #ccc;
+  border: 1px solid #000;
+  box-shadow: 0 0 2px 0px #000101;
+  padding: 10px 10px 5px 35px;
+
+  & button {
+    margin-right: 10px;
+  }
+
+  & h5 {
+    margin-bottom: 10px;
+  }
+}
+
+.show-cookie-banner {
+  display: block;
+}
