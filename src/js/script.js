@@ -4,7 +4,7 @@ $("#nav-icon1").click(function() {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  init();
+  //init();
 });
 
 function init() {
