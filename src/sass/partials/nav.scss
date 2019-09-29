@@ -156,6 +156,10 @@ nav ul {
   width: 100%;
 }
 
+.list-clear-mobile {
+  z-index: 2;
+}
+
 .list-clear-mobile li a {
   margin-left: 10px;
 }
@@ -163,6 +167,9 @@ nav ul {
 .list-clear-mobile .hidden-sub {
   display: block;
   padding-left: 20px;
+  overflow: hidden;
+  position: fixed;
+  margin-top: 90px;
 }
 
 .list-clear-mobile li {

@@ -45,7 +45,8 @@ gulp.task("mustache", function() {
           scripts: "./templates/partials/scripts.mustache",
           nav: "./templates/partials/nav.mustache",
           memberof: "./templates/partials/memberof.mustache",
-          contact: "./templates/partials/contact.mustache"
+          contact: "./templates/partials/contact.mustache",
+          cookie: "./templates/partials/cookie.mustache"
         }
       )
     )

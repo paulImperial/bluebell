@@ -5,6 +5,7 @@ header {
   background-color: $white;
   height: 86.11px;
   position: fixed;
+  z-index: 100;
 }
 
 header ul:not(.hidden-sub) {
