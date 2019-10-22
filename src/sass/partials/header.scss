@@ -1,53 +1,55 @@
 header {
-    width:100%;
-    box-shadow: 0 4px 10px -6px $blue;
-    padding-bottom: 5px;
-    background-color: $white;
-    height:86.11px;
+  width: 100%;
+  box-shadow: rgb(0, 0, 0) 0px 5px 20px -10px;
+  padding-bottom: 5px;
+  background-color: $white;
+  height: 86.11px;
+  position: fixed;
+  z-index: 100;
 }
 
 header ul:not(.hidden-sub) {
-    margin-left:auto;
-    margin-right:auto;
-    width:886px;
-    margin: 0 auto 0 auto;
-    text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 886px;
+  margin: 0 auto 0 auto;
+  text-align: center;
 }
 
 header ul li {
-    width:120px;
-    margin: 30px 5px 0 5px;   
-    position: relative;
+  width: 120px;
+  margin: 30px 5px 0 5px;
+  position: relative;
 }
 
 header ul li:last-of-type {
-    width:90px;
+  width: 90px;
 }
 
 header .mobile-wrapper ul {
-    width:auto;
-} 
+  width: auto;
+}
 
 header .mobile-wrapper ul li:not(.logo-container) {
-    width:auto;
-} 
+  width: auto;
+}
 
 header ul li a {
-    color: $grey;  
+  color: $grey;
 
-    &:hover {
-        color: $green; 
-    }
+  &:hover {
+    color: $green;
+  }
 }
 
 .logo-container {
-    width:8rem;
-    height:8rem;
-    margin:0 10px 0 10px;
-    position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin: 0 10px 0 10px;
+  position: relative;
 }
 
 .image-container img {
-    width:20%;
-    border-radius: 50%;
+  width: 20%;
+  border-radius: 50%;
 }

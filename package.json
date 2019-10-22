@@ -16,7 +16,9 @@
     "dev": "npm run build && npm run sync",
     "start": "lite-server",
     "precommit": "pretty-quick --staged",
-    "lint:js": "eslint src/js/script.js"
+    "lint:js": "eslint src/js/script.js",
+    "transform": "node src/transform.js",
+    "watch": "nodemon dev"
   },
   "author": "Paul Mason",
   "license": "ISC",
@@ -47,7 +49,14 @@
   },
   "dependencies": {
     "del": "^2.2.2",
+    "es6-promise": "^4.2.8",
+    "fs-extra": "^8.1.0",
+    "gulp-rename": "^1.4.0",
+    "isomorphic-fetch": "^2.2.1",
+    "line-clamp": "^1.0.0",
     "mustache": "^2.3.0",
+    "nodemon": "^1.19.3",
+    "ramda": "^0.26.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "watch": "^1.0.2"
