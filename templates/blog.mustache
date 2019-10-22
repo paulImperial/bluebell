@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bluebell Therapy Counselling & Hypnotherapy in Beeston, Nottingham | Blog</title>
+{{>head}}
+
+<body>
+
+{{>header}}
+
+{{>nav}}
+
+    <main id="blogs">
+        <div class="hero-not-main text-center">
+            <h1>Bluebell Therapy</h1>
+            <h2>Blogs</h2>
+        </div>
+
+		<div class="row">
+            <div class="column">
+                <div class="inner-column">
+					<div class='blog-container-wrapper'>
+
+						{{#blogs}}
+						<div class='blog-wrapper'>
+							<a href='/blogs{{url}}.html'>
+								<div class='blog'>
+									<div class='blog-title'>
+										{{title}}
+									</div>
+									<div class='blog-detail'>
+										<img class='blog-picture' src="../img/{{image}}" alt="blog" />
+										<div class='blog-blurb'>
+											{{{teaser}}}
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						{{/blogs}}
+					</div>
+				</div>
+			</div>
+		</div>
+
+        {{>contact}}
+
+		{{>memberof}}
+
+    </main>
+
+{{>footer}}
+
+{{>scripts}}
+
+</body>
+</html>

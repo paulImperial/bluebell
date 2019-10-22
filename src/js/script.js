@@ -5,6 +5,17 @@ $("#nav-icon1").click(function() {
 
 document.addEventListener("DOMContentLoaded", () => {
   //init();
+
+  const blogWrapper = document.querySelectorAll(".blog-wrapper");
+
+  blogWrapper.forEach(blog => {
+    blog.addEventListener("click", function() {
+      // blogWrapper.forEach(blogwrap => {
+      // 	blogwrap.querySelector('.blog-blurb').classList.add('line-clamp')
+      // })
+      blog.querySelector(".blog-blurb").classList.toggle("line-clamp");
+    });
+  });
 });
 
 function init() {
