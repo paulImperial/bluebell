@@ -117,6 +117,7 @@ gulp.task("handlebars", function() {
                 header: "./templates/partials/header.mustache",
                 footer: "./templates/partials/footer.mustache",
                 scripts: "./templates/partials/scripts.mustache",
+                scriptsOneDeep: "./templates/partials/scriptsOneDeep.mustache",
                 nav: "./templates/partials/nav.mustache",
                 memberof: "./templates/partials/memberof.mustache",
                 contact: "./templates/partials/contact.mustache",
