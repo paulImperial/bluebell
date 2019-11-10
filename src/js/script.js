@@ -6,6 +6,14 @@ $("#nav-icon1").click(function() {
 document.addEventListener("DOMContentLoaded", () => {
   //init();
 
+  document.querySelector(".arrow").addEventListener("click", e => {
+    window.scroll({
+      top: 700,
+      left: 0,
+      behavior: "smooth"
+    });
+  });
+
   const blogWrapper = document.querySelectorAll(".blog-wrapper");
 
   blogWrapper.forEach(blog => {
