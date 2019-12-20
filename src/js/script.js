@@ -6,13 +6,16 @@ $("#nav-icon1").click(function() {
 document.addEventListener("DOMContentLoaded", () => {
   //init();
 
-  document.querySelector(".arrow").addEventListener("click", e => {
-    window.scroll({
-      top: 700,
-      left: 0,
-      behavior: "smooth"
-    });
-  });
+  // document.querySelector(".arrow").addEventListener("click", e => {
+  // 	console.log(e);
+  // 	if (e.offsetY < 600) {
+  // 		window.scroll({
+  // 			top: 710,
+  // 			left: 0,
+  // 			behavior: "smooth"
+  // 		});
+  // 	}
+  // });
 
   const blogWrapper = document.querySelectorAll(".blog-wrapper");
 
