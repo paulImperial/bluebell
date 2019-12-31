@@ -1,4 +1,4 @@
-import { resolve, join } from 'path';
+import { resolve } from 'path';
 const express = require('express');
 const next = require('next');
 const dev = process.env.NODE_ENV !== 'production';
