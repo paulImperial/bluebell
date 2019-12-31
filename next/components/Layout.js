@@ -1,6 +1,6 @@
-import React from 'react';
-
-import Header from './Header';
+import React, { Fragment } from 'react';
+import LayoutHead from './Head';
+import Header from './Header/index';
 
 const layoutStyle = {
   margin: 20,
@@ -9,10 +9,13 @@ const layoutStyle = {
 };
 
 const Layout = props => (
-  <div style={layoutStyle}>
-    <Header />
-    {props.children}
-  </div>
+	<Fragment>
+		<LayoutHead />
+		<div style={layoutStyle}>
+			<Header />
+			{props.children}
+		</div>
+	</Fragment>
 );
 
 export default Layout;
