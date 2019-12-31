@@ -6,6 +6,7 @@ const __DEVELOP__ = true;
 const app = next({ dev: __DEVELOP__, dir: resolve(__dirname, '../next') });
 const handler = app.getRequestHandler();
 const router = express.Router();
+import routes from './routes';
 
 app.prepare()
 	.then(() => {
@@ -14,23 +15,17 @@ app.prepare()
 
 		server.set('next', app);
 		server.get('/_next/*', (req, res) => handler(req, res));
-		server.use('/', router);
+		server.use('/', routes);
+		server.disable('x-powered-by');
 
-		router.get("/", function (req, res) {
-			req.app.get('next').render(req, res, '/index', {});
-		})
-
-		router.get("/about", function (req, res) {
-			req.app.get('next').render(req, res, '/about', {});
-		})
-
+		// fallback route
 		server.get('*', (req, res) => {
 			return handler(req, res)
 		});
 		
 		server.listen(3000, (err) => {
 		if (err) throw err
-			console.log('> Ready on http://localhost:3000')
+			console.log('> Listening ...')
 		})
 	}
 )
