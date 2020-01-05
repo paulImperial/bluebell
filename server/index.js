@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { resolve, join } from 'path';
 const express = require('express');
 const next = require('next');
 const dev = process.env.NODE_ENV !== 'production';
@@ -17,6 +17,7 @@ app.prepare()
 		server.get('/_next/*', (req, res) => handler(req, res));
 		server.use('/', routes);
 		server.disable('x-powered-by');
+		server.use('/assets', express.static(join(__dirname, '../dist')));
 
 		// fallback route
 		server.get('*', (req, res) => {

@@ -4,17 +4,21 @@ import LayoutHead from './Head';
 import Header from './Header/index';
 
 const LayoutStyled = styled.div`
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #DDD;
 `;
+
+ const Main = styled.div`
+	margin: 0;
+	padding: 0;
+ `;
 
 const Layout = props => (
 	<Fragment>
-		<LayoutHead />
+		<LayoutHead title={props.title} />
 		<LayoutStyled>
 			<Header />
-			{props.children}
+				<Main>
+					{props.children}
+				</Main>
 		</LayoutStyled>
 	</Fragment>
 );
