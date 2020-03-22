@@ -18,7 +18,7 @@
     "precommit": "pretty-quick --staged",
     "lint:js": "eslint src/js/script.js",
     "transform": "node src/transform.js",
-    "watch": "nodemon dev"
+    "watch": "nodemon npm run dev"
   },
   "author": "Paul Mason",
   "license": "ISC",

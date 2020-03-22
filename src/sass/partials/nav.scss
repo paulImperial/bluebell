@@ -1,3 +1,7 @@
+.list-clear-mobile {
+  position: relative;
+}
+
 .list-clear-mobile li {
   list-style: none;
 }
@@ -157,8 +161,9 @@ nav ul {
 }
 
 .list-clear-mobile {
-  z-index: 2;
+  position: relative;
   padding-top: 15px;
+  z-index: 30;
 }
 
 .list-clear-mobile li a {

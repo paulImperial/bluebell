@@ -173,7 +173,8 @@ gulp.task("mustache", function() {
           nav: "./templates/partials/nav.mustache",
           memberof: "./templates/partials/memberof.mustache",
           contact: "./templates/partials/contact.mustache",
-          cookie: "./templates/partials/cookie.mustache"
+          cookie: "./templates/partials/cookie.mustache",
+          modal: "./templates/partials/modal.mustache"
         }
       )
     )
