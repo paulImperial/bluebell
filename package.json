@@ -10,7 +10,7 @@
   },
   "scripts": {
     "prebuild": "del-cli dist -f",
-    "build": "gulp && npm run server",
+    "build": "gulp",
     "server": "http-server ./dist",
     "sync": "browser-sync start --server ./dist",
     "dev": "npm run build && npm run sync",
