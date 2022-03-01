@@ -1,47 +1,45 @@
 .hero {
-    background:url(../img/bluebell.jpg) no-repeat right top;
-    background-size: cover;
-    height:400px;
-    width:100%;
-    color:#fff;
-    padding: 70px 5px 0 5px;
-    /*border-radius: 0 0 50% 50% / 15%;*/
+  background: url(../img/bluebell.jpg) no-repeat right top;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  color: #fff;
+  padding: 70px 5px 0 5px;
+  /*border-radius: 0 0 50% 50% / 15%;*/
 }
 .hero-not-main {
-    // background:url(../img/clouds.jpg) no-repeat right center;
-    background: linear-gradient(to right, $green,$blue); /* Standard syntax */
-    height:300px;
-    width:100%;
-    color:#fff;
-    padding: 70px 5px 0 5px;
+  background: url(../img/clouds.jpg) no-repeat right center;
+  // background: linear-gradient(to right, $green,$blue); /* Standard syntax */
+  height: 300px;
+  width: 100%;
+  color: #fff;
+  padding: 70px 5px 0 5px;
 }
 .hero-button {
-    width:85%;
-    margin:40px auto 0 auto; 
+  width: 85%;
+  margin: 40px auto 0 auto;
 }
 .hero-button a {
-    display: inline-block;
-    margin: 0 5px;
-
+  display: inline-block;
+  margin: 0 5px;
 }
-@media (max-width:713px){
-    .hero-button a {
-        /*display:block;*/
-        margin: 0 auto 7px auto;
-    }
+@media (max-width: 713px) {
+  .hero-button a {
+    /*display:block;*/
+    margin: 0 auto 7px auto;
+  }
 
-    .hero-button {
-        margin:30px auto 0 auto;
-        /*width:175px;*/
-    }
+  .hero-button {
+    margin: 30px auto 0 auto;
+    /*width:175px;*/
+  }
 
-    .hero-button h3 {
-        display: none;
-    }
-
+  .hero-button h3 {
+    display: none;
+  }
 }
-@media (max-width:412px){
-    .hero {
-        padding-top:40px;
-    }
+@media (max-width: 412px) {
+  .hero {
+    padding-top: 40px;
+  }
 }

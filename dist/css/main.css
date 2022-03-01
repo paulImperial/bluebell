@@ -883,7 +883,7 @@ nav ul {
   padding: 70px 5px 0 5px;
 }
 .hero-not-main {
-  background: linear-gradient(to right, #51ada2, #0fb5c1);
+  background: url(../img/clouds.jpg) no-repeat right center;
   height: 300px;
   width: 100%;
   color: #fff;
