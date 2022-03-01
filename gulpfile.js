@@ -68,7 +68,9 @@ const setImage = url => {
 // https://www.imperial-webservices.co.uk/.netlify/functions/index'
 
 gulp.task("handlebars", function() {
-  fetch("https://www.imperial-webservices.co.uk/.netlify/functions/index")
+  const newLocal =
+    "https://www.imperial-webservices.co.uk/.netlify/functions/index";
+  fetch(newLocal)
     .then(data => data.json())
     .then(data => {
       const blogs = data.blogs;

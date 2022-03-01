@@ -217,8 +217,8 @@ header ul li a:hover {
 }
 
 .image-container img {
-  width: 20%;
-  border-radius: 50%;
+  width: 23%;
+  border-radius: 5%;
 }
 
 .media-container {
@@ -324,8 +324,8 @@ footer {
 }
 
 .social li:hover {
-  transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-  box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.4);
 }
 
 #linkedin {
@@ -348,7 +348,6 @@ footer {
 #linkedin:hover,
 #facebook:hover,
 #instagram:hover {
-  transform: rotate(45deg);
   transition: all 1s ease-in-out;
 }
 
