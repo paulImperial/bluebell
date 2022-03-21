@@ -26,6 +26,9 @@ main {
   .inner-column {
     width: 96%;
   }
+  .image-container img {
+    width: 65%;
+  }
 }
 .text-center {
   text-align: center;
@@ -46,10 +49,13 @@ main {
 }
 .list-clear {
   position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+  margin: 0 auto;
 }
 .list-clear li {
   list-style: none;
-  float: left;
   display: inline-block;
 }
 .list-clear-mobile li {
@@ -92,9 +98,6 @@ html {
 }
 .fl {
   float: left;
-}
-.button {
-  width: 170px;
 }
 .button-center {
   display: block;
@@ -139,15 +142,7 @@ header {
   height: 86.11px;
   position: fixed;
 }
-header ul:not(.hidden-sub) {
-  margin-left: auto;
-  margin-right: auto;
-  width: 886px;
-  margin: 0 auto 0 auto;
-  text-align: center;
-}
 header ul li {
-  width: 120px;
   margin: 30px 5px 0 5px;
   position: relative;
 }
@@ -173,8 +168,12 @@ header ul li a:hover {
   position: relative;
 }
 .image-container img {
-  width: 23%;
+  width: 20%;
   border-radius: 5%;
+  margin-bottom: 1rem;
+  border: 1px solid #575756;
+  padding: 1rem;
+  box-shadow: 11px 4px 15px 0 #ccc;
 }
 .media-container {
   border: 1px solid #ccc;
@@ -182,10 +181,14 @@ header ul li a:hover {
 }
 .list-clear {
   position: relative;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+  margin: 0 auto;
 }
 .list-clear li {
   list-style: none;
-  float: left;
   display: inline-block;
 }
 .list-clear-mobile li {
@@ -548,9 +551,6 @@ footer ul li a:hover {
     padding-left: 0;
   }
 }
-.button {
-  width: 170px;
-}
 .button-med {
   width: 320px;
 }
@@ -599,10 +599,6 @@ footer {
 #instagram {
   background: url(../img/social.jpg) 391px 527px;
 }
-.social li:hover {
-  transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-  box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.4);
-}
 #linkedin {
   background: url(../img/social.jpg) 391px 758px;
 }
@@ -613,7 +609,7 @@ footer {
 #instagram:hover,
 #linkedin:hover,
 #twitter:hover {
-  transition: all 1s ease-in-out;
+  animation: pulsate 3s ease-out infinite;
 }
 .social {
   margin-top: 25px;
@@ -666,6 +662,76 @@ footer ul li a:hover {
   text-decoration: underline;
   color: #fff;
 }
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  45% {
+    transform: scale(1.35);
+    opacity: 0.4;
+  }
+}
+@keyframes stop-pulsate {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+.btn-pulse {
+  position: absolute;
+  top: 195px;
+  left: 190px;
+}
+.btn-pulse .circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 32px;
+  height: 32px;
+  margin: -0.666em auto auto -0.666em;
+  background: #ed0048;
+  border-radius: 50%;
+  opacity: 0.6;
+  transform-origin: 50% 50%;
+  transition: opacity 0.2s ease-in, transform 0.1s ease-out;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 0;
+  text-align: center;
+  line-height: 32px;
+  overflow: hidden;
+}
+.btn-pulse .circle:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.btn-pulse .circle:active {
+  transform: scale(0.875);
+}
+.btn-pulse .ring {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2em;
+  height: 2em;
+  margin: -1em auto auto -1em;
+  transform-origin: 50% 50%;
+  border-radius: 50%;
+  border: 1px solid #ed0048;
+  opacity: 0;
+  animation: pulsate 3s ease-out infinite;
+}
+.btn-pulse:hover .ring {
+  animation: none;
+}
+.btn-pulse:active .ring {
+  animation: stop-pulsate 0.3s;
+}
 header {
   width: 100%;
   box-shadow: #000 0 5px 20px -10px;
@@ -675,15 +741,7 @@ header {
   position: fixed;
   z-index: 100;
 }
-header ul:not(.hidden-sub) {
-  margin-left: auto;
-  margin-right: auto;
-  width: 886px;
-  margin: 0 auto 0 auto;
-  text-align: center;
-}
 header ul li {
-  width: 120px;
   margin: 30px 5px 0 5px;
   position: relative;
 }

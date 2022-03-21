@@ -6,7 +6,7 @@ var imagemin = require("gulp-imagemin");
 var del = require("del");
 var htmlmin = require("gulp-html-minifier");
 var sass = require("gulp-sass");
-var runSequence = require("run-sequence");
+var runSequence = require("gulp4-run-sequence");
 const fetch = require("isomorphic-fetch");
 var rename = require("gulp-rename");
 
@@ -67,7 +67,7 @@ const setImage = url => {
 
 // https://www.imperial-webservices.co.uk/.netlify/functions/index'
 
-gulp.task("handlebars", function() {
+gulp.task("handlebars", async function() {
   const newLocal =
     "https://www.imperial-webservices.co.uk/.netlify/functions/index";
   fetch(newLocal)
@@ -141,7 +141,7 @@ gulp.task("handlebars", function() {
     });
 });
 
-gulp.task("sass", function() {
+gulp.task("sass", async function() {
   gulp
     .src("./src/sass/main.scss")
     .pipe(sass({ style: "expanded" }))
@@ -149,18 +149,18 @@ gulp.task("sass", function() {
     .pipe(gulp.dest("./dist/css"));
 });
 
-gulp.task("minifyHTML", function() {
+gulp.task("minifyHTML", async function() {
   gulp
     .src("./dist/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("./dist"));
 });
 
-gulp.task("clean", function() {
+gulp.task("clean", async function() {
   del("dist/css");
 });
 
-gulp.task("mustache", function() {
+gulp.task("mustache", async function() {
   gulp
     .src("./templates/**/*.mustache")
     .pipe(
@@ -184,7 +184,7 @@ gulp.task("mustache", function() {
     .pipe(gulp.dest("./dist"));
 });
 
-gulp.task("minify", function() {
+gulp.task("minify", async function() {
   gulp
     .src("css/*.css")
     .pipe(cleanCSS({ compatibility: "ie8" }))
@@ -205,14 +205,14 @@ gulp.task("copyJS", function() {
   return gulp.src("src/js/*").pipe(gulp.dest("dist/js"));
 });
 
-gulp.task("imageMin", function() {
+gulp.task("imageMin", async function() {
   gulp
     .src("src/img/*")
     .pipe(imagemin())
     .pipe(gulp.dest("dist/img"));
 });
 
-gulp.task("default", function() {
+gulp.task("default", async function() {
   runSequence(
     "copyJS",
     "imageMin",
