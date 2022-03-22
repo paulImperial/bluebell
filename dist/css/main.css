@@ -551,6 +551,9 @@ footer ul li a:hover {
     padding-left: 0;
   }
 }
+.button-partial {
+  width: 170px;
+}
 .button-med {
   width: 320px;
 }
