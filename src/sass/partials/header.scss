@@ -8,16 +8,16 @@ header {
   z-index: 100;
 }
 
-header ul:not(.hidden-sub) {
-  margin-left: auto;
-  margin-right: auto;
-  width: 886px;
-  margin: 0 auto 0 auto;
-  text-align: center;
-}
+// header ul:not(.hidden-sub) {
+//   margin-left: auto;
+//   margin-right: auto;
+//   width: 886px;
+//   margin: 0 auto 0 auto;
+//   text-align: center;
+// }
 
 header ul li {
-  width: 120px;
+  // width: 120px;
   margin: 30px 5px 0 5px;
   position: relative;
 }
@@ -50,6 +50,6 @@ header ul li a {
 }
 
 .image-container img {
-  width: 20%;
-  border-radius: 50%;
+  width: 23%;
+  border-radius: 5%;
 }

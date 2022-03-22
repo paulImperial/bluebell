@@ -24,13 +24,13 @@
   "license": "ISC",
   "devDependencies": {
     "better-npm-run": "^0.1.0",
-    "browser-sync": "^2.18.8",
+    "browser-sync": "^2.27.7",
     "del": "^2.2.2",
     "del-cli": "^0.2.1",
     "eslint": "^4.18.12",
     "eslint-config-google": "^0.9.1",
     "express": "^4.14.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^3.0.3",
     "gulp-foreach": "^0.1.0",
     "gulp-html-minifier": "^0.1.8",
@@ -39,12 +39,12 @@
     "gulp-sass": "^3.1.0",
     "gulp-uncss": "^1.0.6",
     "gulp-watch": "^4.3.11",
+    "gulp4-run-sequence": "^1.0.0",
     "http-server": "^0.9.0",
     "husky": "^0.14.3",
-    "npm-check": "^5.5.2",
+    "npm-check": "^5.9.2",
     "prettier": "1.11.1",
     "pretty-quick": "^1.4.1",
-    "run-sequence": "^1.2.2",
     "webdav": "^1.1.0"
   },
   "dependencies": {
@@ -55,10 +55,11 @@
     "isomorphic-fetch": "^2.2.1",
     "line-clamp": "^1.0.0",
     "mustache": "^2.3.0",
+    "natives": "^1.1.6",
     "nodemon": "^1.19.3",
     "ramda": "^0.26.1",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.14.0",
     "watch": "^1.0.2"
   }
 }

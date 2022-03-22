@@ -38,6 +38,10 @@ main {
   .inner-column {
     width: 96%;
   }
+
+  .image-container img {
+    width: 65%;
+  }
 }
 .text-center {
   text-align: center;
@@ -59,11 +63,14 @@ main {
 
 .list-clear {
   position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .list-clear li {
   list-style: none;
-  float: left;
   display: inline-block;
 }
 
@@ -120,9 +127,9 @@ body {
 .fl {
   float: left;
 }
-.button {
-  width: 170px;
-}
+// .button {
+//   width: 170px;
+// }
 
 .button-center {
   display: block;
@@ -176,15 +183,15 @@ header {
 }
 
 header ul:not(.hidden-sub) {
-  margin-left: auto;
-  margin-right: auto;
-  width: 886px;
-  margin: 0 auto 0 auto;
-  text-align: center;
+  // margin-left: auto;
+  // margin-right: auto;
+  // width: 886px;
+  // margin: 0 auto 0 auto;
+  // text-align: center;
 }
 
 header ul li {
-  width: 120px;
+  // width: 120px;
   margin: 30px 5px 0 5px;
   position: relative;
 }
@@ -218,7 +225,11 @@ header ul li a:hover {
 
 .image-container img {
   width: 20%;
-  border-radius: 50%;
+  border-radius: 5%;
+  margin-bottom: 1rem;
+  border: 1px solid #575756;
+  padding: 1rem;
+  box-shadow: 11px 4px 15px 0px #ccc;
 }
 
 .media-container {
@@ -228,11 +239,15 @@ header ul li a:hover {
 
 .list-clear {
   position: relative;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .list-clear li {
   list-style: none;
-  float: left;
   display: inline-block;
 }
 
@@ -324,8 +339,8 @@ footer {
 }
 
 .social li:hover {
-  transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
-  box-shadow: 0 0 0 7px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: 0 0 7px 7px rgba(0, 0, 0, 0.4);
 }
 
 #linkedin {
@@ -348,7 +363,6 @@ footer {
 #linkedin:hover,
 #facebook:hover,
 #instagram:hover {
-  transform: rotate(45deg);
   transition: all 1s ease-in-out;
 }
 
