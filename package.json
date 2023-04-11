@@ -45,7 +45,7 @@
     "npm-check": "^5.9.2",
     "prettier": "1.11.1",
     "pretty-quick": "^1.4.1",
-    "webdav": "^1.1.0"
+    "webdav": "^5.0.0-r3"
   },
   "dependencies": {
     "del": "^2.2.2",
