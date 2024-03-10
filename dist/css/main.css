@@ -173,10 +173,9 @@ header ul li a:hover {
   margin-bottom: 1rem;
   border: 1px solid #575756;
   padding: 1rem;
-  box-shadow: 11px 4px 15px 0 #ccc;
+  box-shadow: 0 1px 20px 0 #ccc;
 }
 .media-container {
-  border: 1px solid #ccc;
   padding: 10px 5px;
 }
 .list-clear {
@@ -737,7 +736,7 @@ footer ul li a:hover {
 }
 header {
   width: 100%;
-  box-shadow: #000 0 5px 20px -10px;
+  border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
   background-color: #fff;
   height: 86.11px;
@@ -903,7 +902,6 @@ nav {
 }
 nav ul {
   background-color: #fff;
-  box-shadow: #000 0 10px 20px -10px;
 }
 .displayBlock {
   opacity: 1;
